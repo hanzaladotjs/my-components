@@ -19,7 +19,7 @@ export default function AuthStepOne() {
         Don't have an account?{" "}
         <span className=" font-semibold hover:underline">Sign up. </span>{" "}
       </p>
-      <p className="text-sm font-semibold mt-2 px-33"> OR</p>
+      <p className="text-sm font-semibold mt-2 text-center"> OR</p>
       <div className="flex flex-col space-y-2 text-md font-medium ">
         <button className=" flex items-center py-3 w-full text-start pl-4 border-3 hover:bg-[#d6dbdf] border-[#DCDCDC] rounded-lg  ">
           <svg
