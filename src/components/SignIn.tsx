@@ -1,6 +1,13 @@
-export default function AuthStepOne() {
+import { useState } from "react";
+
+export default function SignIn() {
+  const [step, setStep] = useState<boolean>(false)
+
+  function StepTwo () {
+    setStep(true)
+  }
   return (
-    <div className="flex flex-col space-y-4 font-mono ">
+    <div className="flex flex-col space-y-4 font-mono  ">
       <h1 className="text-3xl text-[#283747] font-bold mb-10">
         {" "}
         Yo! What's up?{" "}
@@ -10,7 +17,13 @@ export default function AuthStepOne() {
         placeholder="Email address"
         className="p-3 border rounded "
       />
-      <button className="p-3 border border-[#DCDCDC] text-white rounded-lg bg-[#5d6d7e] hover:bg-[#283747]">
+      { step &&
+      <input
+       type="text"
+       placeholder="Password"
+       className="p-3 border rounded "
+      />}
+      <button type="submit" onClick={StepTwo} className="p-3 border border-[#DCDCDC] text-white rounded-lg bg-[#5d6d7e] hover:bg-[#283747]">
         {" "}
         Continue{" "}
       </button>
@@ -19,7 +32,7 @@ export default function AuthStepOne() {
         Don't have an account?{" "}
         <span className=" font-semibold hover:underline">Sign up. </span>{" "}
       </p>
-      <p className="text-sm font-semibold mt-2 text-center"> OR</p>
+      <p className="text-lg mt-2 text-center"> OR</p>
       <div className="flex flex-col space-y-2 text-md font-medium ">
         <button className=" flex items-center py-3 w-full text-start pl-4 border-3 hover:bg-[#d6dbdf] border-[#DCDCDC] rounded-lg  ">
           <svg

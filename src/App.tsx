@@ -1,13 +1,14 @@
 import './App.css'
+import SignIn from './components/SignIn'
 
-import AuthStepOne from './components/AuthStepOne'
+
 
 function App() {
  
 
   return (
     <div className='flex justify-center items-center min-h-screen'>
-      <AuthStepOne></AuthStepOne>
+      <SignIn></SignIn>
     </div>
   )
 }
